@@ -8,6 +8,9 @@ export class Form extends Component {
     name: '',
     number: ''
   }
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired
+  }
   handleChange = (event) => {
     const { name, value } = event.currentTarget;
     this.setState({
@@ -57,8 +60,3 @@ export class Form extends Component {
     );
   }
 }
-
-
-Form.propTypes = {
-    onSubmit: PropTypes.func.isRequired
-};
